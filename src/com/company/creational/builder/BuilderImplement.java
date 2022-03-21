@@ -1,4 +1,4 @@
-package com.company.builder;
+package com.company.creational.builder;
 
 class Person{
 
