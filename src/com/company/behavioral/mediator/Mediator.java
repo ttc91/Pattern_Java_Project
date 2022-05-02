@@ -1,13 +1,7 @@
 package com.company.behavioral.mediator;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.format.TextStyle;
-import java.util.Locale;
-
-
 /**
- * <b>Mediator</b>
+ * <b>Mediator</b> : Defines an interface for communicating with Colleague object.
  */
 interface MachineMediator{
 
@@ -22,7 +16,8 @@ interface MachineMediator{
 }
 
 /**
- * <b>Colleague</b>
+ * <b>Colleague</b> : Each colleague class knows its Media object. Each colleague communicates with its
+ * <p>mediator whenever it would have otherwise communicated with another colleague</p>
  */
 
 interface Colleague {
@@ -115,6 +110,10 @@ class Heater implements Colleague {
     }
 
 }
+
+/**
+ * <b>ConcreteMediator</b> : Implements cooperative behavior by coordinating Colleague object. It also knows the maintains its colleague
+ */
 
 class CottonMediator implements MachineMediator {
 
